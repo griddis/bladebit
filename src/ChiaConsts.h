@@ -114,8 +114,8 @@ inline void LoadLTargets()
 //-----------------------------------------------------------
 inline size_t CalculateMaxDeltasSize( TableId tableId )
 {
-    if( tableId == TableId::Table1 )
-        return CDiv( (size_t)((kEntriesPerPark - 1) * kMaxAverageDeltaTable1), 8 );
+    //if( tableId == TableId::Table1 )
+    //    return CDiv( (size_t)((kEntriesPerPark - 1) * kMaxAverageDeltaTable1), 8 );
     
     return CDiv( (size_t)( (kEntriesPerPark - 1) * kMaxAverageDelta ), 8 );
 }
