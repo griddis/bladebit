@@ -82,7 +82,7 @@ bool FileStream::Open( const char* path, FileStream& file, FileMode mode, FileAc
     }
     
     file._fd            = fd;
-    file._blockSize     = (size_t)blockSize;
+    file._blockSize     = 4096; //(size_t)blockSize;
     file._writePosition = 0;
     file._readPosition  = 0;
     file._access        = access;

@@ -365,7 +365,7 @@ void DiskPlotWriter::WriterThread()
 
 
             // _position += RoundUpToNextBoundary( table.size, (int)blockSize );
-            _position += RoundUpToNextBoundary( table.size, tableIndex == 9 ? 512 : (int)blockSize );
+            _position += RoundUpToNextBoundary( table.size, (int)blockSize );
 
             // Save the table pointer
             _tablePointers[tableIndex] = _position;
