@@ -363,7 +363,9 @@ void DiskPlotWriter::WriterThread()
             tableIndex ++;
             _lastTableIndexWritten.store( tableIndex, std::memory_order_release );
 
-            _position += RoundUpToNextBoundary( table.size, (int)blockSize );
+
+            // _position += RoundUpToNextBoundary( table.size, (int)blockSize );
+            _position += RoundUpToNextBoundary( table.size, tableIndex == 9 ? 512 : (int)blockSize );
 
             // Save the table pointer
             _tablePointers[tableIndex] = _position;
